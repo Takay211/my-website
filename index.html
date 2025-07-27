@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KANDYTOWN紹介サイト</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="kyandy.css">
+</head>
+<body>
+  <header>
+    <h1>KANDYTOWN</h1>
+    <nav>
+      <a href="#profile">プロフィール</a>
+      <a href="#achievements">実績</a>
+      <a href="#highlights">ハイライト</a>
+      <a href="#members">メンバー</a>
+    </nav>
+  </header>
+
+  <section class="hero-banner">
+    <div>
+      <h2>東京発、唯一無二のヒップホップクルー</h2>
+      <p>カルチャーと音楽を融合させたKANDYTOWNの世界観</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="fadein">
+      <div class="anchor-offset" id="profile"></div>
+      <h3>プロフィール</h3>
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSMHHBp10dqDn86jS_XdsOGtvg8HYUhZXQCKOeWPbIKXsUKESglkWmNhvlDBFCMQVl8W0ZzOqN_BhWxZasOnudT6cJgjhJBc-PDt-B-8wDqFQ" alt="KANDYTOWN集合写真" class="card-img">
+      <p><strong>結成：</strong> 2010年代前半 / <strong>出身：</strong> 東京・世田谷 / <strong>ジャンル：</strong> Hip-Hop / R&B</p>
+      <p>東京のリアルを体現する音楽集団。音楽だけでなく、映像やファッションなど多岐にわたる活動を展開。</p>
+    </section>
+
+    <section class="fadein">
+      <div class="anchor-offset" id="achievements"></div>
+      <h3>主な実績</h3>
+      <ul>
+        <li>2016年：メジャーデビューアルバム『KANDYTOWN』</li>
+        <li>2020年：アルバム『ADVISORY』がヒット</li>
+        <li>2022年：解散発表、伝説的存在へ</li>
+        <li>ファッション：Supremeなどとコラボ多数</li>
+      </ul>
+    </section>
+
+    <section class="fadein">
+      <div class="anchor-offset" id="highlights"></div>
+      <h3>名場面・ハイライト</h3>
+      <p>都会的で洗練されたサウンドと、日本語ラップの革新性を兼ね備えたKANDYTOWNの表現力。</p>
+      <p>2023年：日本武道館での解散ライブで有終の美。</p>
+    </section>
+
+    <section class="fadein">
+      <div class="anchor-offset" id="members"></div>
+      <h3>メンバー紹介</h3>
+      <ul>
+        <li><strong>IO</strong>：映像や構成も担当する中心人物</li>
+        <li><strong>KEIJU</strong>：メロディアスなソロ作品で人気</li>
+        <li><strong>Ryohu</strong>：トラックメイクもこなすマルチアーティスト</li>
+        <li><strong>Neetz</strong>：主要ビートメーカー</li>
+        <li><strong>Gottz, Dony Joint, KIKUMARU</strong>：個性豊かなラップスタイル</li>
+        <li>他多数...</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+  const fadeElements = document.querySelectorAll('.fadein');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
